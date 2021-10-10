@@ -24,46 +24,37 @@
 
             <img class="logo" src="img/logo.png" alt="">
         </div>
-        <div class="login h-100 p-5">
+        <div class="login h-100 pr-5 pl-5 pb-5 pt-0">
+<p class="text-white">Nice to see you! Please enter your phone number and password to get started:</p>
             <form autocomplete="off" id="login-form" class="row g-3 d-flex justify-content-center align-items-center">
                 <div class="col-md-10">
                     <label for="phone" class="form-label text-white">Phone number</label>
-                    <input type="number" class="form-control" id="phone" >
+                    <input type="number" class="form-control" id="phone" placeholder="+47 XXX XX XXX">
 
                     <div id="phone-feedback" class="d-none text-danger">
-                        Enter phone number!
+                        Please enter your phone number!
                     </div>
-                    <label for="password" class="form-label text-white">Create password</label>
-                    <input type="password" class="form-control" id="password" >
+                    <br>
+                    <label for="password" class="form-label text-white">password</label>
+                    <input type="password" class="form-control" id="password" placeholder="************">
 
                     <div id="password-feedback" class="d-none text-danger">
-                        Enter a password!
-                    </div>
+                        Please enter a password!
+                    </div>                <br>
+
                 </div>
-                <div class="col-10">
-                    <div class="form-check">
-                        <div class="d-flex flex-row">
-
-                            <label class="form-check-label text-white" >
-                                Agree to terms and conditions
-                            </label>
-                            <input id="conditions" class="form-check-input " type="checkbox"
-                            >
-                        </div>
-
+                
+                <p class="text-white m-0">Agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.<input id="conditions" class="form-check-input ml-2 mt-2" type="checkbox"></p>
                         <div id="conditions-feedback" class="d-none text-danger">
                             You must agree before submitting.
                         </div>
-
-                    </div>
-                </div>
+                        <br>
+                <br>
                     <button class="btn btn-primary rounded-btn" type="submit">Continue</button>
-
             </form>
         </div>
     </div>
     <div class="welcome-page">
-        <p>welcome</p>
     </div>
     <div class="verification-page">
         <div class="logo-div">

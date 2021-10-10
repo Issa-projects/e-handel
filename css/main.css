@@ -1,5 +1,6 @@
 .mobile-app{
-  height:700px;
+  margin-top: 200px;
+  height:625px;
   width:400px;
   border: solid 5px white;
 
@@ -7,7 +8,7 @@
 .landing-page{
   height:100%;
   width:100%;
-  background: #050505;
+  background: #241f20;
 }
 
 .logo{
@@ -15,7 +16,7 @@
 
 }
 .logo-div{
-  height:320px;
+  height:150px;
   width:100%;
   display:flex;
   align-items:center;
