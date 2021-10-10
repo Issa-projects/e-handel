@@ -26,23 +26,25 @@ $("#login-form").submit(function(e){
     }
 
     if(password && phone && conditions){
-        navigate(".landing-page", ".verification-page")
+        navigate(".verification-page")
     }
 
 })
 
 $("#verification-form").submit(function(e){
+    e.preventDefault();
     code = $("#code").val();
-    if(code !== 1234){
+    if(Number(code) !== 1234){
         $("#code-feedback").removeClass("d-none");
-        navigate(".verification-page", ".welcome-page")
     }else{
         $("#code-feedback").addClass("d-none");
+        navigate( ".welcome-page")
     }
 })
 
 
-function navigate(current, next){
-    $(current).addClass("d-none");
-    $(next).removeClass("d-none")
+function navigate(to){
+    $(".page").removeClass("active")
+    $(to).addClass("active");
+
 }
