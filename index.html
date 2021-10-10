@@ -19,14 +19,17 @@
 </head>
 <body class="h-100 bg-dark d-flex justify-content-center align-items-center">
 <div class="mobile-app">
-    <div class="landing-page">
+    <div class="landing-page page active">
         <div class="logo-div">
 
             <img class="logo" src="img/logo.png" alt="">
         </div>
-        <div class="login h-100 pr-5 pl-5 pb-5 pt-0">
-<p class="text-white">Nice to see you! Please enter your phone number and password to get started:</p>
+        <div class="login h-100  pb-5 pt-0">
+
             <form autocomplete="off" id="login-form" class="row g-3 d-flex justify-content-center align-items-center">
+                <p class="text-white col-md-10">
+    Nice to see you! Please enter your phone number and password to get started:
+</p>
                 <div class="col-md-10">
                     <label for="phone" class="form-label text-white">Phone number</label>
                     <input type="number" class="form-control" id="phone" placeholder="+47 XXX XX XXX">
@@ -44,24 +47,25 @@
 
                 </div>
                 
-                <p class="text-white m-0">Agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.<input id="conditions" class="form-check-input ml-2 mt-2" type="checkbox"></p>
+                <p class="text-white m-0 col-md-10 mb-4">Agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.<input id="conditions" class="form-check-input ml-2 mt-2" type="checkbox"></p>
                         <div id="conditions-feedback" class="d-none text-danger">
                             You must agree before submitting.
                         </div>
                         <br>
                 <br>
-                    <button class="btn btn-primary rounded-btn" type="submit">Continue</button>
+                <div class="col-md-10">
+
+                    <button class="btn btn-primary rounded-btn w-100" type="submit">Continue</button>
+                </div>
             </form>
         </div>
     </div>
-    <div class="welcome-page">
-    </div>
-    <div class="verification-page">
+    <div class="verification-page page">
         <div class="logo-div">
 
             <img class="logo" src="img/logo.png" alt="">
         </div>
-       <div class="login h-100">
+        <div class="login h-100">
             <form autocomplete="off" id="verification-form" class="row g-3 d-flex justify-content-center align-items-center">
                 <div class="col-md-10 P-5">
 
@@ -78,6 +82,8 @@
 
             </form>
         </div>
+    </div>
+    <div class="welcome-page page">
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -24,7 +24,22 @@
 }
 .rounded-btn{
   border-radius:15px;
+  background-color:#f15e40;
+  border: none;
+
+}
+
+.rounded-btn:hover{
+  background-color:#f15e40;
 }
 .welcome-page{
 
+}
+
+.page{
+  display: none;
+
+}
+.active{
+  display: block;
 }
