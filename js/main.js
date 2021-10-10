@@ -42,6 +42,30 @@ $("#verification-form").submit(function(e){
     }
 })
 
+$("#welcome-form").submit(function(e){
+    e.preventDefault();
+    navigate( ".login-page")
+})
+
+$("#login-form").submit(function(e){
+    e.preventDefault();
+    phone = $("#phone").val();
+    password = $("#password").val();
+    if(Number(phone) !== 46575460){
+        $("#phone-feedback").removeClass("d-none");
+    }else{
+        $("#phone-feedback").addClass("d-none");
+        navigate( ".home-page")
+    }
+    if(password === "46575460"){
+        $("#phone-feedback").removeClass("d-none");
+    }else{
+        $("#phone-feedback").addClass("d-none");
+        navigate( ".home-page")
+    }
+
+})
+
 
 function navigate(to){
     $(".page").removeClass("active")
