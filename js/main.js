@@ -41,6 +41,7 @@ $("#verification-form").submit(function(e){
         navigate( ".login-page")
     }
 })
+
 $("input").keypress(function(){
    input_id = $(this).attr('id');
    feedback_id= '#'+input_id + '-' + 'feedback';
@@ -56,26 +57,34 @@ $("input[type=checkbox]").change(function() {
     }
 });
 
+
 $("#welcome-form").submit(function(e){
     e.preventDefault();
-    navigate( ".login-page")
+    navigate( ".home-page")
 })
 
 $("#login-form").submit(function(e){
     e.preventDefault();
-    phone = $("#phone").val();
-    password = $("#password").val();
-    if(Number(phone) !== 46575460){
-        $("#phone-feedback").removeClass("d-none");
+    phone = $("#login-phone").val();
+    password = $("#login-password").val();
+    if(Number(phone) !== 12345678){
+        $("#login-phone-feedback").removeClass("d-none");
+        phone = false
     }else{
-        $("#phone-feedback").addClass("d-none");
-        navigate( ".home-page")
+        phone=true
+        $("#login-phone-feedback").addClass("d-none");
+
     }
-    if(password === "46575460"){
-        $("#phone-feedback").removeClass("d-none");
+    if(Number(password) !== 12345678){
+        password=false;
+        $("#login-password-feedback").removeClass("d-none");
     }else{
-        $("#phone-feedback").addClass("d-none");
-        navigate( ".home-page")
+        password=true;
+        $("#login-password-feedback").addClass("d-none");
+
+    }
+    if(password && phone){
+        navigate( ".welcome-page")
     }
 
 })
