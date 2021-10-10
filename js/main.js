@@ -1,4 +1,4 @@
-$("#login-form").submit(function(e){
+$("#register-form").submit(function(e){
     e.preventDefault();
 
     phone = $('#phone').val();
@@ -38,9 +38,23 @@ $("#verification-form").submit(function(e){
         $("#code-feedback").removeClass("d-none");
     }else{
         $("#code-feedback").addClass("d-none");
-        navigate( ".welcome-page")
+        navigate( ".login-page")
     }
 })
+$("input").keypress(function(){
+   input_id = $(this).attr('id');
+   feedback_id= '#'+input_id + '-' + 'feedback';
+   $(feedback_id).addClass("d-none");
+
+})
+
+$("input[type=checkbox]").change(function() {
+    if(this.checked) {
+        input_id = $(this).attr('id');
+   feedback_id= '#'+input_id + '-' + 'feedback';
+   $(feedback_id).addClass("d-none");
+    }
+});
 
 $("#welcome-form").submit(function(e){
     e.preventDefault();
@@ -72,3 +86,14 @@ function navigate(to){
     $(to).addClass("active");
 
 }
+function tab(to){
+    $(".tab-screen").removeClass("active")
+    $(to).addClass("active");
+
+}
+
+
+$('.tabs .tab').click(function(){
+    $('.tabs .tab').removeClass('active-tab');
+    $(this).addClass("active-tab");
+})

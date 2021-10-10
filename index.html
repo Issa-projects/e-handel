@@ -19,14 +19,14 @@
 </head>
 <body class="h-100 bg-dark d-flex justify-content-center align-items-center">
 <div class="mobile-app">
-    <div class="landing-page page active">
+    <div class="landing-page page ">
         <div class="logo-div">
 
             <img class="logo" src="img/logo.png" alt="">
         </div>
-        <div class="login h-100  pb-5 pt-0">
+        <div class="register h-100  pb-5 pt-0">
 
-            <form autocomplete="off" id="login-form" class="row g-3 d-flex justify-content-center align-items-center">
+            <form autocomplete="off" id="register-form" class="row g-3 d-flex justify-content-center align-items-center">
                 <p class="text-white col-md-10">
     Nice to see you! Please enter your phone number and password to get started:
 </p>
@@ -60,13 +60,13 @@
         </div>
     </div>
     <div class="verification-page page">
-        <div class="logo-div">
+        <div class="logo-div h-50">
 
             <img class="logo" src="img/logo.png" alt="">
         </div>
-        <div class="login h-100">
+        <div class="register h-50">
             <form autocomplete="off" id="verification-form" class="row g-3 d-flex justify-content-center align-items-center">
-                <div class="col-md-10 P-5">
+                <div class="col-md-10 pb-4">
 
                     <label for="code" class="form-label text-white">Enter the verification code</label>
                     <input type="number" class="form-control" id="code" >
@@ -77,11 +77,38 @@
 
 
                 </div>
-                <button class="btn btn-primary rounded-btn" type="submit">Continue</button>
+                 <div class="col-md-10">
+
+                    <button class="btn btn-primary rounded-btn w-100" type="submit">Continue</button>
+                </div>
 
             </form>
         </div>
     </div>
+
+     <div class="home-page page active">
+         <div class="map-screen tab-screen">
+             <img class="map-img" src="img/map.png" alt="">
+         </div>
+         <div class="home-screen tab-screen active">
+                home
+         </div>
+         <div class="profile-screen tab-screen">
+             profile
+         </div>
+         <div class="tabs">
+             <div class="map-tab tab">
+                    <button onClick="tab('.map-screen')" class="btn"> map <i class="fas fa-search-location"></i></button>
+             </div>
+             <div class="home-tab tab active-tab">
+                    <button onClick="tab('.home-screen')" class="btn"> home <i class="fas fa-qrcode"></i></button>
+             </div>
+
+             <div class="profile-tab tab">
+                 <button onClick="tab('.profile-screen')" class="btn"> Profile <i class="fas fa-user-circle"></i>
+                 </button>
+             </div>
+         </div>
     <div class="welcome-page landing-page page">
         <div class="logo-div">
 
@@ -100,7 +127,6 @@
 
             </form>
         </div>
-
     </div>
     <div class="login-page landing-page page">
         <div class="logo-div">
