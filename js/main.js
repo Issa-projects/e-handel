@@ -97,6 +97,32 @@ $("#login-form").submit(function(e){
 //End: Sjekk login-form om tlf og passord er 12345678
 
 
+//Start: Sjekk add-card-form om koden er 1234 4 ganger og at cvv == 123
+$("#add-card-form").submit(function(e){
+    e.preventDefault();
+    code = $("#add-card-number").val();
+    cvv = $("#cvv-number").val();
+    if(Number(code) !== 1234123412341234){
+        code=false;
+        $("#add-card-number-feedback").removeClass("d-none");
+    }else{
+        $("#add-card-number-feedback").addClass("d-none");
+        code=true;
+    }
+    if(Number(cvv) !== 123){
+        cvv=false;
+        $("#cvv-number-feedback").removeClass("d-none");
+    }else{
+        $("#cvv-number-feedback").addClass("d-none");
+        cvv=true;
+    }
+    if(code && cvv) {
+        navigate( ".home-page")
+    }
+})
+//End: Sjekk add-card-form om koden er 1234 4 ganger og at cvv == 123
+
+
 //Start: Navigate to home page after welcome page
 $("#welcome-form").submit(function(e){
     e.preventDefault();

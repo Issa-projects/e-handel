@@ -171,6 +171,50 @@
         </div>
     </div>
 
+    <div class="add-card-page landing-page page">
+        <div class="logo-div">
+
+            <img class="logo mr-2" src="img/logo.png" alt="">
+        </div>
+        <div class="add-card h-100  pb-5 pt-0">
+
+            <form autocomplete="off" id="add-card-form"
+                  class="row g-3 d-flex justify-content-center align-items-center">
+                <p class="text-white col-md-10">
+                    Please add your card information below:
+                </p>
+                <div class="col-md-10">
+                    <label for="add-card-number" class="form-label text-white">Card number *</label>
+                    <input type="number" class="form-control" id="add-card-number" placeholder="0000 0000 0000 0000">
+
+                    <div id="add-card-number-feedback" class="d-none text-danger">
+                        Please enter your card number!
+                    </div>
+                    <br>
+                    <label for="expiration-date" class="form-label text-white">Expiration Date *</label>
+                    <input type="month" class="form-control" id="expiration-date" min="2021-12" required>
+
+                    <div id="expiration-date-feedback" class="d-none text-danger">
+                        Please enter your expiration date!
+                    </div>
+                    <br>
+                    <label for="cvv-number" class="form-label text-white">CVV *</label>
+                    <input type="number" class="form-control" id="cvv-number" placeholder="XXX">
+
+                    <div id="cvv-number-feedback" class="d-none text-danger">
+                        Please enter your CVV (Card Verification Value)!
+                    </div>
+                    <br>
+
+                </div>
+                <div class="col-md-10 mt-3">
+
+                    <button class="btn btn-primary rounded-btn w-100" type="submit">Add Card</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
