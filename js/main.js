@@ -1,39 +1,3 @@
-//Start: Sjekk register-form
-$("#register-form").submit(function(e){
-    e.preventDefault();
-
-    phone = $('#phone').val();
-    if(phone.length == 0){
-        $("#phone-feedback").removeClass("d-none");
-        phone=false;
-    }else{
-        $("#phone-feedback").addClass("d-none");
-        phone=true;
-    }
-    password = $('#password').val();
-    if(password.length == 0){
-        $("#password-feedback").removeClass("d-none");
-        password=false;
-    }else{
-        $("#password-feedback").addClass("d-none");
-        password=true;
-    }
-    conditions=false;
-    if(!$("#conditions").is(":checked")){
-        $("#conditions-feedback").removeClass("d-none");
-    }else{
-        $("#conditions-feedback").addClass("d-none");
-        conditions=true;
-    }
-
-    if(password && phone && conditions){
-        navigate(".verification-page")
-    }
-
-})
-//End: Sjekk register-form
-
-
 //Start: Fjern feilmelding når brukeren begynner å fylle inputtene
 $("input").keypress(function(){
    input_id = $(this).attr('id');
@@ -66,6 +30,41 @@ $("#verification-form").submit(function(e){
     }
 })
 //End: Sjekk verification-form om koden er 1234
+
+//Start: Sjekk register-form om tlf og passord er 12345678
+$("#register-form").submit(function(e){
+    e.preventDefault();
+    phone = $("#phone").val();
+    password = $("#password").val();
+    if(Number(phone) !== 12345678){
+        $("#phone-feedback").removeClass("d-none");
+        phone = false
+    }else{
+        phone=true
+        $("#phone-feedback").addClass("d-none");
+
+    }
+    if(Number(password) !== 12345678){
+        password=false;
+        $("#password-feedback").removeClass("d-none");
+    }else{
+        password=true;
+        $("#password-feedback").addClass("d-none");
+
+    }
+    conditions=false;
+    if(!$("#conditions").is(":checked")){
+        $("#conditions-feedback").removeClass("d-none");
+    }else{
+        $("#conditions-feedback").addClass("d-none");
+        conditions=true;
+    }
+    if(password && phone && conditions){
+        navigate(".verification-page")
+    }
+
+})
+//End: Sjekk register-form om tlf og passord er 12345678
 
 
 //Start: Sjekk login-form om tlf og passord er 12345678
