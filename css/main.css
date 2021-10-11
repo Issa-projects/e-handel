@@ -1,11 +1,9 @@
 .mobile-app{
-  margin-top: 200px;
+  margin-top: 100px;
   height:625px;
   width:400px;
   border: solid 5px white;
-
 }
-
 
 .landing-page{
   height:100%;
@@ -13,17 +11,10 @@
   background: #241f20;
 }
 
-.verification-page{
-  background: #241f20;
-  height:100%;
-}
-
-
-
 .logo{
   width: 320px;
-
 }
+
 .logo-div{
   height:150px;
   width:100%;
@@ -31,24 +22,25 @@
   align-items:center;
   justify-content:center;
 }
+
 .rounded-btn{
   border-radius:15px;
   background-color:#f15e40;
   border: none;
-
 }
 
 .rounded-btn:hover{
   background-color:#f15e40;
 }
+
 .home-page{
   height:100%;
 }
 
 .page{
   display: none;
-
 }
+
 .active{
   display: block!important;
 }
@@ -64,28 +56,33 @@
   align-items:center;
 
 }
+
 .tab-screen{
   display: none;
   position:relative;
   top:0;
   height:85%;
 }
+
 .map-img{
   position:relative;
   height:100%;
   width:100%;
 
 }
+
 .active-tab{
   position:relative;
   bottom:40%;
 
 
 }
+
 .tab.active-tab, .tab.active-tab button {
     color:white;
   background-color:blue;
 }
+
 .tab, .tab button{
   border-radius:50%;
   height:75px;

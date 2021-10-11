@@ -19,10 +19,10 @@
 </head>
 <body class="h-100 bg-dark d-flex justify-content-center align-items-center">
 <div class="mobile-app">
-    <div class="landing-page page ">
+    <div class="landing-page page active ">
         <div class="logo-div">
 
-            <img class="logo" src="img/logo.png" alt="">
+            <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
         <div class="register h-100  pb-5 pt-0">
 
@@ -32,14 +32,14 @@
                     Nice to see you! Please enter your phone number and password to get started:
                 </p>
                 <div class="col-md-10">
-                    <label for="phone" class="form-label text-white">Phone number</label>
+                    <label for="phone" class="form-label text-white">Phone number *</label>
                     <input type="number" class="form-control" id="phone" placeholder="+47 XXX XX XXX">
 
                     <div id="phone-feedback" class="d-none text-danger">
                         Please enter your phone number!
                     </div>
                     <br>
-                    <label for="password" class="form-label text-white">password</label>
+                    <label for="password" class="form-label text-white">Password *</label>
                     <input type="password" class="form-control" id="password" placeholder="************">
 
                     <div id="password-feedback" class="d-none text-danger">
@@ -50,9 +50,9 @@
                 </div>
 
                 <p class="text-white m-0 col-md-10">Agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy
-                    Policy</a>.<input id="conditions" class="form-check-input ml-2 mt-2" type="checkbox"></p>
-                <div id="conditions-feedback" class="d-none text-danger">
-                    You must agree before submitting.
+                    Policy</a>.<input id="conditions" class="form-check-input ml-2 mt-2" type="radio"></p>
+                <div id="conditions-feedback" class="d-none text-danger col-md-10">
+                    You must agree before submitting!
                 </div>
                 <br>
                 <div class="col-md-10 mt-3">
@@ -62,10 +62,10 @@
             </form>
         </div>
     </div>
-    <div class="verification-page page ">
-        <div class="logo-div h-50">
+    <div class=" verification-page landing-page page ">
+        <div class="logo-div h-25">
 
-            <img class="logo" src="img/logo.png" alt="">
+            <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
         <div class="register h-50">
             <form autocomplete="off" id="verification-form"
@@ -76,7 +76,7 @@
                     <input type="number" class="form-control" id="code">
 
                     <div id="code-feedback" class="d-none text-danger">
-                        verification code is not valid!
+                        Verification code is not valid!
                     </div>
 
 
@@ -93,7 +93,7 @@
     <div class="login-page landing-page page ">
         <div class="logo-div">
 
-            <img class="logo" src="img/logo.png" alt="">
+            <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
         <div class="login h-100  pb-5 pt-0">
 
@@ -103,14 +103,14 @@
                     Nice to see you! Please enter your phone number and password to log in:
                 </p>
                 <div class="col-md-10">
-                    <label for="login-phone" class="form-label text-white">Phone number</label>
+                    <label for="login-phone" class="form-label text-white">Phone number *</label>
                     <input type="number" class="form-control" id="login-phone" placeholder="+47 XXX XX XXX">
 
                     <div id="login-phone-feedback" class="d-none text-danger">
                         Please enter your phone number!
                     </div>
                     <br>
-                    <label for="login-password" class="form-label text-white">password</label>
+                    <label for="login-password" class="form-label text-white">Password *</label>
                     <input type="password" class="form-control" id="login-password" placeholder="************">
 
                     <div id="login-password-feedback" class="d-none text-danger">
@@ -126,10 +126,10 @@
             </form>
         </div>
     </div>
-    <div class="welcome-page landing-page page active">
+    <div class="welcome-page landing-page page">
         <div class="logo-div">
 
-            <img class="logo" src="img/logo.png" alt="">
+            <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
         <div class="login h-100  pb-5 pt-0">
 

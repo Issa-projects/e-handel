@@ -1,3 +1,4 @@
+//Start: Sjekk register-form
 $("#register-form").submit(function(e){
     e.preventDefault();
 
@@ -30,7 +31,30 @@ $("#register-form").submit(function(e){
     }
 
 })
+//End: Sjekk register-form
 
+
+//Start: Fjern feilmelding når brukeren begynner å fylle inputtene
+$("input").keypress(function(){
+   input_id = $(this).attr('id');
+   feedback_id= '#'+input_id + '-' + 'feedback';
+   $(feedback_id).addClass("d-none");
+})
+//End: Fjern feilmelding når brukeren begynner å fylle inputtene
+
+
+//Start: Fjern feilmelding når brukeren input type = radio er checked
+$("input[type=radio]").change(function() {
+    if(this.checked) {
+        input_id = $(this).attr('id');
+   feedback_id= '#'+input_id + '-' + 'feedback';
+   $(feedback_id).addClass("d-none");
+    }
+});
+//End: Fjern feilmelding når brukeren input type = radio er checked
+
+
+//Start: Sjekk verification-form om koden er 1234
 $("#verification-form").submit(function(e){
     e.preventDefault();
     code = $("#code").val();
@@ -41,28 +65,10 @@ $("#verification-form").submit(function(e){
         navigate( ".login-page")
     }
 })
-
-$("input").keypress(function(){
-   input_id = $(this).attr('id');
-   feedback_id= '#'+input_id + '-' + 'feedback';
-   $(feedback_id).addClass("d-none");
-
-})
-
-$("input[type=checkbox]").change(function() {
-    if(this.checked) {
-        input_id = $(this).attr('id');
-   feedback_id= '#'+input_id + '-' + 'feedback';
-   $(feedback_id).addClass("d-none");
-    }
-});
+//End: Sjekk verification-form om koden er 1234
 
 
-$("#welcome-form").submit(function(e){
-    e.preventDefault();
-    navigate( ".home-page")
-})
-
+//Start: Sjekk login-form om tlf og passord er 12345678
 $("#login-form").submit(function(e){
     e.preventDefault();
     phone = $("#login-phone").val();
@@ -88,17 +94,25 @@ $("#login-form").submit(function(e){
     }
 
 })
+//End: Sjekk login-form om tlf og passord er 12345678
+
+
+//Start: Navigate to home page after welcome page
+$("#welcome-form").submit(function(e){
+    e.preventDefault();
+    navigate( ".home-page")
+})
+//End: Navigate to home page after welcome page
 
 
 function navigate(to){
     $(".page").removeClass("active")
     $(to).addClass("active");
-
 }
+
 function tab(to){
     $(".tab-screen").removeClass("active")
     $(to).addClass("active");
-
 }
 
 
