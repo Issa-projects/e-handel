@@ -96,6 +96,34 @@ $("#login-form").submit(function(e){
 //End: Sjekk login-form om tlf og passord er 12345678
 
 
+//Start: Sjekk report-form
+$("#report-form").submit(function(e){
+    e.preventDefault();
+    bikeID = $("#bike").val();
+    description = $("#description").val();
+    if(Number(bikeID) !== 12345){
+        $("#bike-feedback").removeClass("d-none");
+        bikeID = false
+    }else{
+        bikeID=true
+        $("#bike-feedback").addClass("d-none");
+    }
+    if(description.length === 0){
+        description=false;
+        $("#description-feedback").removeClass("d-none");
+    }else{
+        description=true;
+        $("#description-feedback").addClass("d-none");
+
+    }
+    if(bikeID && description){
+        navigate( ".home-page")
+    }
+
+})
+//End: Sjekk report-form
+
+
 //Start: Sjekk add-card-form om koden er 1234 4 ganger og at cvv == 123
 $("#add-card-form").submit(function(e){
     e.preventDefault();
@@ -128,6 +156,38 @@ $("#welcome-form").submit(function(e){
     navigate( ".home-page")
 })
 //End: Navigate to home page after welcome page
+
+
+//Start: Navigate to log in page after sign out
+$("#profile-form").submit(function(e){
+    e.preventDefault();
+    navigate( ".login-page")
+})
+//End: Navigate to log in page after sign out
+
+
+//Start: Navigate to add card page
+$("#addcardform").click(function(e){
+    e.preventDefault();
+    navigate( ".add-card-page")
+})
+//End: Navigate to log in page
+
+
+//Start: Navigate to my history page
+$("#myhistoryform").click(function(e){
+    e.preventDefault();
+    navigate( ".my-history-page")
+})
+//End: Navigate to my history page
+
+
+//Start: Navigate to help page
+$("#helpform").click(function(e){
+    e.preventDefault();
+    navigate( ".help-page")
+})
+//End: Navigate to help page
 
 
 function navigate(to){

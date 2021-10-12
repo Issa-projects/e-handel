@@ -10,5 +10,7 @@
 
 `CVV: 123`
 
+`Bike id: 12345`
+
 We made these restrictions just to show you the possible error messages that could be faced as if it was a real app.
-# Enjoy :)
+# Enjoy! :)

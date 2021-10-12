@@ -145,28 +145,81 @@
         </div>
 
     </div>
-    <div class="home-page page ">
+    <div class="home-page landing-page page">
         <div class="map-screen tab-screen">
             <img class="map-img" src="img/map.png" alt="">
         </div>
-        <div class="home-screen tab-screen active">
-            home
-        </div>
-        <div class="profile-screen tab-screen">
-            profile
-        </div>
-        <div class="tabs">
-            <div class="map-tab tab">
-                <button onClick="tab('.map-screen')" class="btn"> map <i class="fas fa-search-location"></i></button>
+        <div class="profile-screen tab-screen active">
+            <div class="logo-div">
+                <img class="logo mr-2" src="img/logo.png" alt="">
             </div>
-            <div class="home-tab tab active-tab">
-                <button onClick="tab('.home-screen')" class="btn"> home <i class="fas fa-qrcode"></i></button>
+            <div class="profile h-100  pb-5 pt-0">
+    
+                <form autocomplete="off" id="profile-form"
+                      class="row g-3 d-flex justify-content-center align-items-center">
+                    <div class="col-md-10">
+                        <label for="phone" class="form-label text-white">Phone number : 12345678</label> <br> <br>
+                      <label for="phone" class="form-label text-white">Payment card : 1234 1234 1234 1234</label> <br> <br>
+                      <a id="#"><button type="button" class="profile-btn pl-0">Change phone number</button><br><br>
+                      </a>
+                      <a id="addcardform"><button type="submit" class="profile-btn pl-0">Change payment card</button><br><br>
+                      </a>
+                      <a id="myhistoryform"><button type="submit" class="profile-btn pl-0">My history</button><br><br>
+                      </a>
+                      <a id="helpform"><button type="submit" class="profile-btn pl-0">Help</button><br><br>
+                      </a>
+                      <button type="submit" class="text-danger profile-btn pl-0">Sign out</button>
+                    </div>
+                </form>
             </div>
+            </div>
+            <div class="report-screen tab-screen">
+                <div class="logo-div">
 
+                    <img class="logo mr-2" src="img/logo.png" alt="">
+                </div>
+                <div class="report h-100  pb-5 pt-0">
+        
+                    <form autocomplete="off" id="report-form"
+                          class="row g-3 d-flex justify-content-center align-items-center">
+                        <p class="text-white col-md-10">
+                            Are you experiencing any problems with our bikes, please report it here:
+                        </p>
+                        <div class="col-md-10">
+                            <label for="bike" class="form-label text-white">Bike id *</label>
+                            <input type="number" class="form-control" id="bike" placeholder="">
+        
+                            <div id="bike-feedback" class="d-none text-danger">
+                                Please enter your bike id!
+                            </div>
+                            <br>
+                            <label for="description" class="form-label text-white">Description *</label>
+                            <textarea class="form-control" id="description" rows="2" cols="50"></textarea>
+        
+                            <div id="description-feedback" class="d-none text-danger">
+                                Please descripe the issue!
+                            </div>
+                            <br>
+                        </div>
+                                <div class="col-md-10 mt-3">        
+                            <button class="btn btn-primary rounded-btn w-100" type="submit">Report</button>
+                        </div>
+                    </form>
+                </div>
+        
+            </div>    
+        <div class="tabs">
             <div class="profile-tab tab">
-                <button onClick="tab('.profile-screen')" class="btn"> Profile <i class="fas fa-user-circle"></i>
+                <button onClick="tab('.profile-screen')" class="btn"><i class="fas fa-user-circle"></i>
                 </button>
             </div>
+            <div class="map-tab tab">
+                <button onClick="tab('.map-screen')" class="btn"><i class="fas fa-qrcode"></i></button>
+            </div>
+            <div class="report-tab tab active-tab">
+                <button onClick="tab('.report-screen')" class="btn"><i class="fas fa-exclamation"></i></button>
+            </div>
+
         </div>
     </div>
     <div class="my-history-page landing-page page">
