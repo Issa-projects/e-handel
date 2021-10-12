@@ -93,6 +93,12 @@
   align-items:center;
 }
 
+.scroll-div {
+  overflow: scroll;
+  height: 400px;
+  overflow-x: hidden;
+}
+
 .list-group .list-group-item:hover {
   background-color: #f15e40;
 }
