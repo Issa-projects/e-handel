@@ -96,7 +96,7 @@
 
 .scroll-div {
   overflow: scroll;
-  height: 400px;
+  height: 350px;
   overflow-x: hidden;
 }
 
@@ -109,4 +109,8 @@
   background-color:#241f20;
   border: none;
   cursor: pointer;
+}
+
+.back-icon {
+  color:#f15e40;
 }

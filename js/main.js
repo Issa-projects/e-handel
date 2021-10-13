@@ -26,7 +26,7 @@ $("#verification-form").submit(function(e){
         $("#code-feedback").removeClass("d-none");
     }else{
         $("#code-feedback").addClass("d-none");
-        navigate( ".login-page")
+        navigate( ".welcome-page")
     }
 })
 //End: Sjekk verification-form om koden er 1234
@@ -89,7 +89,7 @@ $("#login-form").submit(function(e){
 
     }
     if(password && phone){
-        navigate( ".welcome-page")
+        navigate( ".home-page")
     }
 
 })
@@ -188,6 +188,33 @@ $("#helpform").click(function(e){
     navigate( ".help-page")
 })
 //End: Navigate to help page
+
+
+//Start: Navigate to previous page
+$("#verification-back").click(function(e){
+    e.preventDefault();
+    navigate( ".landing-page")
+})
+
+
+$("#myhistory-back").click(function(e){
+    e.preventDefault();
+    navigate( ".home-page")
+})
+
+
+$("#addcard-back").click(function(e){
+    e.preventDefault();
+    navigate( ".home-page")
+})
+
+
+$("#help-back").click(function(e){
+    e.preventDefault();
+    navigate( ".home-page")
+})
+
+//End: Navigate to previous page
 
 
 function navigate(to){
