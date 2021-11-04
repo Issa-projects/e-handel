@@ -2,7 +2,8 @@
   margin-top: 100px;
   height:625px;
   width:400px;
-  border: solid 5px white;
+  border: solid 5px black;
+  border-radius: 25px;
 }
 
 .landing-page{
@@ -39,6 +40,10 @@
 
 .page{
   display: none;
+  border-radius: 20px;
+  max-height:625px;
+
+
 }
 
 .active{
@@ -49,12 +54,13 @@
   background-color:#f4826b;
   height:10%;
   position:relative;
-  bottom:0;
+  bottom:5px;
   display:flex;
   flex-direction: row;
   justify-content:space-around;
   align-items:center;
   margin-top: 35px;
+  border-radius:20px;
 
 }
 
@@ -69,6 +75,7 @@
   position:relative;
   height:110%;
   width:100%;
+  border-radius:20px;
 
 }
 
@@ -111,6 +118,56 @@
   cursor: pointer;
 }
 
-.back-icon {
-  color:#f15e40;
+.fa-arrow-circle-left {
+  height: 40px;
+  width: 40px;
+  font-size: 40px!important;
+  color: #f15e40;
+  cursor: pointer;
+  position:absolute;
+  left:30px;
+  top: 30px;
 }
+
+
+
+.fa-bicycle{
+    position: absolute;
+    color: #30a314;
+    font-size: 30px;
+
+}
+
+.fa-bicycle:hover{
+  cursor: pointer;
+  font-size:32px;
+
+}
+.fa-search-location{
+  font-size: 26px;
+}
+
+.qr-code-img{
+  width:auto;
+  max-width:60%;
+  position:absolute;
+  top:130px;
+  left:20%;
+
+
+
+}
+.scan-btn{
+  position: absolute;
+  bottom:70px;
+  left: 12.5%;
+  background-color: #f15e40;
+  font-weight: bold;
+  color: white;
+
+}
+
+
+
+
+

@@ -1,65 +1,65 @@
 //Start: Fjern feilmelding når brukeren begynner å fylle inputtene
-$("input").keypress(function(){
-   input_id = $(this).attr('id');
-   feedback_id= '#'+input_id + '-' + 'feedback';
-   $(feedback_id).addClass("d-none");
+$("input").keypress(function () {
+    input_id = $(this).attr('id');
+    feedback_id = '#' + input_id + '-' + 'feedback';
+    $(feedback_id).addClass("d-none");
 })
 //End: Fjern feilmelding når brukeren begynner å fylle inputtene
 
 
 //Start: Fjern feilmelding når brukeren input type = radio er checked
-$("input[type=radio]").change(function() {
-    if(this.checked) {
+$("input[type=radio]").change(function () {
+    if (this.checked) {
         input_id = $(this).attr('id');
-   feedback_id= '#'+input_id + '-' + 'feedback';
-   $(feedback_id).addClass("d-none");
+        feedback_id = '#' + input_id + '-' + 'feedback';
+        $(feedback_id).addClass("d-none");
     }
 });
 //End: Fjern feilmelding når brukeren input type = radio er checked
 
 
 //Start: Sjekk verification-form om koden er 1234
-$("#verification-form").submit(function(e){
+$("#verification-form").submit(function (e) {
     e.preventDefault();
     code = $("#code").val();
-    if(Number(code) !== 1234){
+    if (Number(code) !== 1234) {
         $("#code-feedback").removeClass("d-none");
-    }else{
+    } else {
         $("#code-feedback").addClass("d-none");
-        navigate( ".welcome-page")
+        navigate(".welcome-page")
     }
 })
 //End: Sjekk verification-form om koden er 1234
 
 //Start: Sjekk register-form om tlf og passord er 12345678
-$("#register-form").submit(function(e){
+$("#register-form").submit(function (e) {
     e.preventDefault();
     phone = $("#phone").val();
     password = $("#password").val();
-    if(Number(phone) !== 12345678){
+    if (Number(phone) !== 12345678) {
         $("#phone-feedback").removeClass("d-none");
         phone = false
-    }else{
-        phone=true
+    } else {
+        phone = true
         $("#phone-feedback").addClass("d-none");
 
     }
-    if(Number(password) !== 12345678){
-        password=false;
+    if (Number(password) !== 12345678) {
+        password = false;
         $("#password-feedback").removeClass("d-none");
-    }else{
-        password=true;
+    } else {
+        password = true;
         $("#password-feedback").addClass("d-none");
 
     }
-    conditions=false;
-    if(!$("#conditions").is(":checked")){
+    conditions = false;
+    if (!$("#conditions").is(":checked")) {
         $("#conditions-feedback").removeClass("d-none");
-    }else{
+    } else {
         $("#conditions-feedback").addClass("d-none");
-        conditions=true;
+        conditions = true;
     }
-    if(password && phone && conditions){
+    if (password && phone && conditions) {
         navigate(".verification-page")
     }
 
@@ -68,28 +68,28 @@ $("#register-form").submit(function(e){
 
 
 //Start: Sjekk login-form om tlf og passord er 12345678
-$("#login-form").submit(function(e){
+$("#login-form").submit(function (e) {
     e.preventDefault();
     phone = $("#login-phone").val();
     password = $("#login-password").val();
-    if(Number(phone) !== 12345678){
+    if (Number(phone) !== 12345678) {
         $("#login-phone-feedback").removeClass("d-none");
         phone = false
-    }else{
-        phone=true
+    } else {
+        phone = true
         $("#login-phone-feedback").addClass("d-none");
 
     }
-    if(Number(password) !== 12345678){
-        password=false;
+    if (Number(password) !== 12345678) {
+        password = false;
         $("#login-password-feedback").removeClass("d-none");
-    }else{
-        password=true;
+    } else {
+        password = true;
         $("#login-password-feedback").addClass("d-none");
 
     }
-    if(password && phone){
-        navigate( ".home-page")
+    if (password && phone) {
+        navigate(".home-page")
     }
 
 })
@@ -97,27 +97,27 @@ $("#login-form").submit(function(e){
 
 
 //Start: Sjekk report-form
-$("#report-form").submit(function(e){
+$("#report-form").submit(function (e) {
     e.preventDefault();
     bikeID = $("#bike").val();
     description = $("#description").val();
-    if(Number(bikeID) !== 12345){
+    if (Number(bikeID) !== 12345) {
         $("#bike-feedback").removeClass("d-none");
         bikeID = false
-    }else{
-        bikeID=true
+    } else {
+        bikeID = true
         $("#bike-feedback").addClass("d-none");
     }
-    if(description.length === 0){
-        description=false;
+    if (description.length === 0) {
+        description = false;
         $("#description-feedback").removeClass("d-none");
-    }else{
-        description=true;
+    } else {
+        description = true;
         $("#description-feedback").addClass("d-none");
 
     }
-    if(bikeID && description){
-        navigate( ".home-page")
+    if (bikeID && description) {
+        navigate(".home-page")
     }
 
 })
@@ -125,110 +125,195 @@ $("#report-form").submit(function(e){
 
 
 //Start: Sjekk add-card-form om koden er 1234 4 ganger og at cvv == 123
-$("#add-card-form").submit(function(e){
+$("#add-card-form").submit(function (e) {
     e.preventDefault();
     code = $("#add-card-number").val();
     cvv = $("#cvv-number").val();
-    if(Number(code) !== 1234123412341234){
-        code=false;
+    if (Number(code) !== 1234123412341234) {
+        code = false;
         $("#add-card-number-feedback").removeClass("d-none");
-    }else{
+    } else {
         $("#add-card-number-feedback").addClass("d-none");
-        code=true;
+        code = true;
     }
-    if(Number(cvv) !== 123){
-        cvv=false;
+    if (Number(cvv) !== 123) {
+        cvv = false;
         $("#cvv-number-feedback").removeClass("d-none");
-    }else{
+    } else {
         $("#cvv-number-feedback").addClass("d-none");
-        cvv=true;
+        cvv = true;
     }
-    if(code && cvv) {
-        navigate( ".home-page")
+    if (code && cvv) {
+        navigate(".home-page")
     }
 })
 //End: Sjekk add-card-form om koden er 1234 4 ganger og at cvv == 123
 
 
 //Start: Navigate to home page after welcome page
-$("#welcome-form").submit(function(e){
+$("#welcome-form").submit(function (e) {
     e.preventDefault();
-    navigate( ".home-page")
+    navigate(".home-page")
 })
 //End: Navigate to home page after welcome page
 
 
 //Start: Navigate to log in page after sign out
-$("#profile-form").submit(function(e){
+$("#profile-form").submit(function (e) {
     e.preventDefault();
-    navigate( ".login-page")
+    navigate(".login-page")
 })
 //End: Navigate to log in page after sign out
 
 
 //Start: Navigate to add card page
-$("#addcardform").click(function(e){
+$("#addcardform").click(function (e) {
     e.preventDefault();
-    navigate( ".add-card-page")
+    navigate(".add-card-page")
 })
 //End: Navigate to log in page
 
 
 //Start: Navigate to my history page
-$("#myhistoryform").click(function(e){
+$("#myhistoryform").click(function (e) {
     e.preventDefault();
-    navigate( ".my-history-page")
+    navigate(".my-history-page")
 })
 //End: Navigate to my history page
 
 
 //Start: Navigate to help page
-$("#helpform").click(function(e){
+$("#helpform").click(function (e) {
     e.preventDefault();
-    navigate( ".help-page")
+    navigate(".help-page")
 })
 //End: Navigate to help page
 
 
 //Start: Navigate to previous page
-$("#verification-back").click(function(e){
-    e.preventDefault();
-    navigate( ".landing-page")
-})
 
 
-$("#myhistory-back").click(function(e){
-    e.preventDefault();
-    navigate( ".home-page")
-})
 
 
-$("#addcard-back").click(function(e){
-    e.preventDefault();
-    navigate( ".home-page")
-})
 
 
-$("#help-back").click(function(e){
-    e.preventDefault();
-    navigate( ".home-page")
-})
+
+
+
 
 //End: Navigate to previous page
 
 
-function navigate(to){
+function navigate(to) {
     $(".page").removeClass("active")
     $(to).addClass("active");
 }
 
-function tab(to){
+function tab(to) {
     $(".tab-screen").removeClass("active")
     $(to).addClass("active");
 }
 
 
-$('.tabs .tab').click(function(){
+$('.tabs .tab').click(function () {
     $('.tabs .tab').removeClass('active-tab');
     $(this).addClass("active-tab");
 })
+
+/*---- Randomize bicycle icon position  -----*/
+
+
+function randomPos() {
+    let icons = $(".fa-bicycle")
+
+    let map = new Object({height: 575, width: 575});
+
+    console.log(getRandomBetween(10, map.height))
+    console.log(getRandomBetween(10, map.width))
+    for (let i = 0; i < icons.length; i++) {
+        $(icons[i]).css({
+            top: getRandomBetween(10, map.height, "top"),
+            right: getRandomBetween(10, map.width, "right")
+        })
+    }
+
+    $(icons[0]).css({
+        color: 'red'
+    })
+    $(icons[1]).css({
+        color: 'red'
+    })
+
+
+}
+
+function getRandomBetween(min, max, tag) {
+
+    let value = 1000;
+    if (tag === "top") {
+        while (value > 490) {
+            value = Math.random() * (max - min) + min;
+        }
+        return value;
+
+    } else {
+        while (value > 350) {
+            value = Math.random() * (max - min) + min;
+        }
+        return value;
+
+    }
+}
+
+randomPos();
+
+
+function clickBicycle(that){
+    navigate(".scan-qr")
+}
+
+
+let seconds = 0;
+let cancel = 0;
+
+
+$("#counter-btn").click(function(){
+    let minutes = seconds%60;
+        let secondsLeft= seconds - minutes * 60;
+        if(getlength(minutes) === 1){
+            minutes = '0' + minutes;
+        }
+        if(getlength(seconds) === 1){
+            seconds = '0' + seconds;
+        }
+
+        minutes = Number(minutes);
+        seconds = Number(seconds);
+
+        console.log(seconds)
+    if(cancel === 0){
+
+        cancel = setInterval(incrementSeconds, 1000);
+    }else{
+        clearInterval(cancel);
+
+
+        cancel=0;
+        seconds=0;
+        $(".counter").text(seconds);
+
+
+    }
+
+})
+function incrementSeconds() {
+    seconds += 1;
+    $(".counter").text(seconds);
+
+}
+
+function getlength(number) {
+    return number.toString().length;
+}
+
+
