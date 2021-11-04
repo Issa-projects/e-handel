@@ -228,8 +228,6 @@ function randomPos() {
 
     let map = new Object({height: 575, width: 575});
 
-    console.log(getRandomBetween(10, map.height))
-    console.log(getRandomBetween(10, map.width))
     for (let i = 0; i < icons.length; i++) {
         $(icons[i]).css({
             top: getRandomBetween(10, map.height, "top"),
@@ -269,51 +267,40 @@ randomPos();
 
 
 function clickBicycle(that){
+    if($(that).css("color") === "rgb(255, 0, 0)") {
+        navigate(".error")
+    }else{
     navigate(".scan-qr")
 }
-
-
-let seconds = 0;
-let cancel = 0;
+}
 
 
 $("#counter-btn").click(function(){
-    let minutes = seconds%60;
-        let secondsLeft= seconds - minutes * 60;
-        if(getlength(minutes) === 1){
-            minutes = '0' + minutes;
-        }
-        if(getlength(seconds) === 1){
-            seconds = '0' + seconds;
-        }
-
-        minutes = Number(minutes);
-        seconds = Number(seconds);
-
-        console.log(seconds)
-    if(cancel === 0){
-
-        cancel = setInterval(incrementSeconds, 1000);
-    }else{
-        clearInterval(cancel);
-
-
-        cancel=0;
-        seconds=0;
-        $(".counter").text(seconds);
-
-
+    var $worked = $("#worked");
+    
+    function update() {
+        var myTime = $worked.html();
+        var ss = myTime.split(":");
+        var dt = new Date();
+        dt.setHours(0);
+        dt.setMinutes(ss[0]);
+        dt.setSeconds(ss[1]);
+        
+        var dt2 = new Date(dt.valueOf() + 1000);
+        var temp = dt2.toTimeString().split(" ");
+        var ts = temp[0].split(":");
+        
+        $worked.html(ts[1]+":"+ts[2]);
+        setTimeout(update, 1000);
     }
 
+    setTimeout(update, 1000);
+    var text = $(this).text();
+    if(text === 'Start') {
+        $(this).text("End");
+    }
+    else {
+        navigate(".summary");
+        $("#summary-time").text($worked.text());
+            }
 })
-function incrementSeconds() {
-    seconds += 1;
-    $(".counter").text(seconds);
-
-}
-
-function getlength(number) {
-    return number.toString().length;
-}
-
-
