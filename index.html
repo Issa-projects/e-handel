@@ -18,7 +18,7 @@
 </head>
 <body class="h-100 bg-dark d-flex justify-content-center align-items-center">
 <div class="mobile-app">
-    <div class="landing-page page ">
+    <div class="landing-page page active">
         <div class="logo-div">
             <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
@@ -61,14 +61,17 @@
         </div>
     </div>
     <div class=" verification-page landing-page page ">
-                        <i onclick="navigate('.landing-page')" class="fas fa-arrow-circle-left"></i>
-        <div class="logo-div h-25">
+        <div class="col-md-12 text-center h-100">
+        <div class="h-100">
+            <i onclick="navigate('.landing-page')" id="qr-back" class="fas fa-arrow-circle-left"></i>
+
+        <div class="logo-div h-25 pt-5">
             <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
         <div class="register h-50">
             <form autocomplete="off" id="verification-form"
                   class="row g-3 d-flex justify-content-center align-items-center">
-                <div class="col-md-10 pb-4">
+                <div class="col-md-10 pb-4 pt-5">
 
                     <label for="code" class="form-label text-white">We have sent a verification code to your number, please enter the code below:</label>
                     <input type="number" class="form-control" id="code">
@@ -85,6 +88,8 @@
                 </div>
 
             </form>
+        </div>
+    </div>
         </div>
     </div>
     <div class="login-page landing-page page ">
@@ -143,7 +148,7 @@
         </div>
 
     </div>
-    <div class="home-page landing-page page active">
+    <div class="home-page landing-page page">
         <div class="map-screen tab-screen active">
             <img class="map-img" src="img/map.png" alt="">
             <i onclick="clickBicycle(this)" class="fas fa-bicycle"></i>
@@ -234,8 +239,11 @@
         </div>
     </div>
     <div class="my-history-page landing-page page">
-                        <i onclick="navigate('.home-page')" class="fas fa-arrow-circle-left"></i>
-        <div class="logo-div">
+        <div class="col-md-12 text-center h-100">
+            <div class="h-100">
+                <i onclick="navigate('.home-page')" id="qr-back" class="fas fa-arrow-circle-left"></i>
+    
+        <div class="logo-div pt-5">
 
             <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
@@ -258,13 +266,17 @@
             </form>
         </div>
     </div>
+        </div>
+    </div>
     <div class="add-card-page landing-page page">
-                        <i onclick="navigate('.home-page')" class="fas fa-arrow-circle-left"></i>
+        <div class="col-md-12 text-center h-100">
+            <div class="h-100">
+                <i onclick="navigate('.home-page')" id="qr-back" class="fas fa-arrow-circle-left"></i>
 
-        <div class="logo-div">
+        <div class="logo-div pt-5">
             <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
-        <div class="add-card h-100  pb-5 pt-0">
+        <div class="add-card h-100  pb-5 pt-5">
 
             <form autocomplete="off" id="add-card-form"
                   class="row g-3 d-flex justify-content-center align-items-center">
@@ -300,15 +312,19 @@
                     <button class="btn btn-primary rounded-btn w-100" type="submit">Add Card</button>
                 </div>
             </form>
-        </div>
+        </div>        </div>
+    </div>
+
     </div>
     <div class="help-page landing-page page">
-                        <i onclick="navigate('.home-page')" class="fas fa-arrow-circle-left"></i>
-        <div class="logo-div">
+        <div class="col-md-12 text-center h-100">
+            <div class="h-100">
+                <i onclick="navigate('.home-page')" id="qr-back" class="fas fa-arrow-circle-left"></i>
+        <div class="logo-div pt-5">
 
             <img class="logo mr-2" src="img/logo.png" alt="">
         </div>
-        <div class="help h-100  pb-5 pt-0">
+        <div class="help h-100  pb-5 pt-5">
 
             <form autocomplete="off" id="help-form"
                   class="row g-3 d-flex justify-content-center align-items-center">
@@ -325,7 +341,9 @@
                           </ul>
                         </div>
             </form>
-        </div>
+        </div>        </div>
+    </div>
+
     </div>
     <div class="scan-qr landing-page page">
 
