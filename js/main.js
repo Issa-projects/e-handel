@@ -301,6 +301,6 @@ $("#counter-btn").click(function(){
     }
     else {
         navigate(".summary");
-        $("#summary-time").text($worked.text());
+//        $("#summary-time").text($worked.text());
             }
 })
